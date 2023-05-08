@@ -1,6 +1,6 @@
-const fs = require ("fs")
+import fs from "fs";
 
-class ProductManager {
+export default class ProductManager {
   constructor() {
     this.patch = './productoss.txt';
     //contendor de productos para que no se pisen
@@ -45,17 +45,17 @@ class ProductManager {
   };
 
   //espera que se lean los productos y luego se realiza la consulta sobre los productos que tiene el archivo
-  getProducts = async () => {
+  /*getProducts = async () => {
     try {
       const respDos = await this.readProducts();
       console.log(respDos);
     } catch (error) {
       console.error('Error al obtener productos:', error);
     }
-  };
+  };*/
 
   //// Filtro los productos por su id y me devulve el producto correspondiente a su id
-  getProductsById = async (id) => {
+  /*getProductsById = async (id) => {
     try {
       const respTres = await this.readProducts();
 
@@ -69,10 +69,10 @@ class ProductManager {
     } catch (error) {
       console.error('Error al obtener producto por ID:', error);
     }
-  };
+  };*/
 
   // borra los productos 
-  deleteProductsById = async (id) => {
+  /*deleteProductsById = async (id) => {
     try {
       const respTres = await this.readProducts();
          //FILTRO LOS PRODUCTOS QUE COINCIDAN CON EL ID
@@ -87,10 +87,10 @@ class ProductManager {
     } catch (error) {
       console.error('Error al eliminar el producto:', error);
     }
-  };
+  };*/
 
   //Actualizamos el producto
-  updateProducts = async ({ id, ...producto }) => {
+  /*updateProducts = async ({ id, ...producto }) => {
     try {
         // // se borra el producto por su id
       await this.deleteProductsById(id);
@@ -107,12 +107,12 @@ class ProductManager {
       console.error('Error al actualizar productos:', error);
     }
   };
-}
+}*/
 
 //creando un nuevo producto
-const products = new ProductManager();
+//const products = new ProductManager();
 
-(async () => {
+/*(async () => {
   try {
     await products.addProduct(
       'producto1',
@@ -210,9 +210,9 @@ const products = new ProductManager();
       stock: 7,
       id: 3,
     });*/
-  } catch (error) {
+   } /*catch (error) {
     console.error('Error:', error);
   }
-})();
+})();*/
 
 
